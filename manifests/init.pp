@@ -26,8 +26,8 @@
 class vpackages (
   $packages         = {},
   $purge_yumrepos   = false,
-  $realize_packages = undef,
-  $realize_yumrepos = undef,
+  $realize_packages = [],
+  $realize_yumrepos = [],
   $yumrepos         = {},
 ) {
   validate_hash($packages)
