@@ -1,0 +1,17 @@
+{
+  "name": "jmswick-vpackages",
+  "version": "0.1.0",
+  "author": "Joseph Swick",
+  "summary": "Creates Virtual Package resources based on a hiera hash.",
+  "license": "Apache-2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "requirements" : [
+    {"name": "puppet", "version_requirement": ">= 4.9.0 < 5.0.0"}
+  ],
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.0.0"}
+  ]
+}
+
