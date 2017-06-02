@@ -65,27 +65,21 @@ vpackages::realize_packages:
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+With Hiera 5, the following lookup options hash is recommended for optimal
+functionalty of the module to allow for taking advantage of what Hiera can
+bring to the table.
 
-## Reference
-
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
+```
+lookup_options:
+  '^vpackages::(.*)$':
+    merge:
+      strategy: deep
+      knockout_prefix: --
+```
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+This module so far has only been tested on Red Hat Enterprise Linux, but should
+work on any OS that is supported by Puppet due to it just being a wrapper around
+the Puppet package resource.
 
-## Development
-
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
-
-## Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You may also add any additional sections you feel are
-necessary or important to include here. Please use the `## ` header.
